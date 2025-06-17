@@ -6,4 +6,4 @@ export const IMAGES = [
     "https://i.imghippo.com/files/BYyg8888CE.jpg"
 ];
 
-export const DEFAULT_TIME = 2000;
+export const DEFAULT_TIME = 5000;
