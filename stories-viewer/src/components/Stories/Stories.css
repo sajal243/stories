@@ -1,0 +1,55 @@
+.root {
+    color: red;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.lines {
+    display: flex;
+    gap: 10px;
+    width: 500px;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    /* background-color: blueviolet; */
+}
+
+.lineParent {
+    /* width: 100px; */
+    border-radius: 8px;
+    background-color: #cecece;
+    height: 5px;
+}
+
+.line{
+    background-color: blue;
+
+}
+
+.image{
+    width: 550px;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.overlay{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+
+}
+
+.left, .right{
+    width: 50%;
+    height: 100%;
+}
