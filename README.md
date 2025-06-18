@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# 📖 Story Viewer App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Instagram-style Story Viewer built using React and TypeScript. The app automatically plays through a series of images with visual progress indicators and allows manual navigation.
 
-## Available Scripts
+On clicking left part, user can move to previous story.
+similarly, on clicking right part, user can move to next story.
 
-In the project directory, you can run:
+🌐 **Live Demo**: [https://sajal243.github.io/stories/] 
 
-### `npm start`
+### Github Repo url - [https://github.com/sajal243/stories]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/sajal243/stories.git
+```
+### 2. Install dependencies
+npm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 3. Run locally
+npm start
 
-### `npm test`
+### 4. Unit & Integration Tests
+npm test
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 5. Folder Structure
+root
+├── public/
+├── src/
+│   ├── components/
+│   │   └── Stories/
+│   │       ├── Stories.tsx
+│   │       ├── Stories.css
+│   │       └── Stories.test.tsx
+│   ├── constants/
+│   │   └── constant.ts
+│   ├── index.tsx
+│   ├── App.tsx
+│   └── setupTests.ts
+├── README.md
+└── package.json
 
-### `npm run build`
+### 6. Design Decisions 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 1. Performance Optimization
+Memoized State Updates: Only updates the state when activeIndex changes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+CSS Animation: Progress bars use CSS animation instead of JavaScript intervals.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Efficient Interval Handling: Uses setInterval with clearInterval in useEffect to ensure no memory leaks.
 
-### `npm run eject`
+#### 2. Scalability
+Constants in Separate File: Easily manage stories and settings from constants/constant.ts.
+Modular Components: Stories component is self-contained and reusable.
+Typed Props and State: Using TypeScript helps prevent bugs and improves editor support.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 3. Accessibility
+Uses semantic HTML (alt tags) and progressive enhancement to ensure screen reader compatibility.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
