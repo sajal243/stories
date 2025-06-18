@@ -1,4 +1,4 @@
-export const IMAGES = [
+export const IMAGES: string[]= [
     "https://i.imghippo.com/files/Vw6558r.jpg",
     "https://i.imghippo.com/files/bya3979ow.jpg",
     "https://i.imghippo.com/files/eWob8719sGs.jpg",
@@ -6,4 +6,4 @@ export const IMAGES = [
     "https://i.imghippo.com/files/BYyg8888CE.jpg"
 ];
 
-export const DEFAULT_TIME = 5000;
+export const DEFAULT_TIME:number = 5000;

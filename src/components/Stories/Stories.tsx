@@ -3,9 +3,9 @@ import "./Stories.css";
 import { DEFAULT_TIME, IMAGES } from '../../constants/constant';
 
 export const Stories = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState<number>(0);
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        const intervalId:NodeJS.Timeout = setInterval(() => {
             setActiveIndex((prev) => (prev === IMAGES.length - 1 ? 0 : prev + 1));
         }, DEFAULT_TIME);
 
@@ -14,11 +14,10 @@ export const Stories = () => {
         };
     }, [activeIndex]);
 
-    console.log("active index", activeIndex);
   return (
     <div className='root'>
         <div className='lines'>
-            {IMAGES?.map((_, idx) => (<div className={`lineParent ${idx < activeIndex ? "visited": ""}`}>
+            {IMAGES?.map((_, idx) => (<div key={idx} className={`lineParent ${idx < activeIndex ? "visited": ""}`}>
                 <div className={`line ${idx === activeIndex ? 'active' : ""}`} style={{animationDuration: `${DEFAULT_TIME}ms`}}></div>
             </div>))}
         </div>
